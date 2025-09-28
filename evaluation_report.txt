@@ -1,0 +1,85 @@
+========================================
+Mini Agentic Pipeline - Evaluation Report
+========================================
+
+This report summarizes the results of 10 test queries.
+Each entry shows query, tool usage, latency, and answer quality.
+
+----------------------------------------
+Query 1: What is cloud pricing?
+Tool Used: None (KB only)
+Latency: 0.08s
+Answer Quality: Accurate; retrieved relevant KB doc and summarized correctly
+----------------------------------------
+
+Query 2: How do rate limiting patterns work?
+Tool Used: None (KB only)
+Latency: 0.11s
+Answer Quality: Good; retrieved 3 docs, provided correct explanation of token/leaky bucket
+----------------------------------------
+
+Query 3: What is machine learning?
+Tool Used: None (KB only)
+Latency: 0.13s
+Answer Quality: Weak; KB had no relevant content, returned neutral response
+----------------------------------------
+
+Query 4: What is the price of coffee?
+Tool Used: CSV Lookup
+Latency: 0.18s
+Answer Quality: Excellent; retrieved exact price (3.5 USD, SKU COF123)
+----------------------------------------
+
+Query 5: Find SKU PEN456
+Tool Used: CSV Lookup
+Latency: 0.21s
+Answer Quality: Excellent; retrieved correct SKU and price (1.2 USD, SKU PEN456)
+----------------------------------------
+
+Query 6: Show me available products
+Tool Used: CSV Lookup
+Latency: 0.24s
+Answer Quality: Very good; listed all products (Coffee, Pen, Laptop, Notebook) with prices and stock
+----------------------------------------
+
+Query 7: What is the latest news about AI?
+Tool Used: Web Search (simulated)
+Latency: 0.27s
+Answer Quality: Acceptable; returned simulated search result, would need real API for production
+----------------------------------------
+
+Query 8: How to implement REST APIs in Python?
+Tool Used: None (KB only)
+Latency: 0.30s
+Answer Quality: Fair; pulled from KB but explanation limited (focused on CSV-as-API example)
+----------------------------------------
+
+Query 9: Get user information for user ID 1
+Tool Used: None (KB only)
+Latency: 0.37s
+Answer Quality: Weak; no relevant KB docs, returned neutral response
+----------------------------------------
+
+Query 10: Find the price of coffee and then search for coffee brewing tips
+Tool Used: CSV Lookup
+Latency: 0.49s
+Answer Quality: Partial; price lookup failed due to multi-intent query, returned not-found
+----------------------------------------
+
+Summary Observations:
+- Latency: 
+  * KB-only queries: ~0.08–0.13s
+  * CSV lookups: ~0.18–0.24s
+  * Web search (simulated): ~0.27s
+- Quality:
+  * Strong when queries matched KB or CSV (Q1, Q2, Q4–Q6).
+  * Weak on queries outside KB scope (Q3, Q9, Q10).
+  * Web search simulated — functional, but limited for real-world.
+
+Takeaways:
+- Pipeline correctly decides when to use KB vs. tools.
+- Latency per query is low (<0.5s).
+- Future Work:
+  * Integrate real web search API.
+  * Expand KB coverage.
+  * Handle multi-intent queries.
