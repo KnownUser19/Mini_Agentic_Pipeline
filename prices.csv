@@ -1,0 +1,6 @@
+sku,name,category,price,currency,stock,description
+COF123,Coffee,beverage,3.50,USD,120,Freshly roasted filter coffee
+PEN456,Pen,stationery,1.20,USD,500,Ballpoint pen - blue ink
+LAP789,Laptop,electronics,799.00,USD,15,"14-inch laptop, 8GB RAM, 256GB SSD"
+BOOK001,Notebook,stationery,4.50,USD,100,200-pages spiral notebook
+
