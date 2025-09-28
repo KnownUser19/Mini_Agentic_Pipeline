@@ -1,0 +1,165 @@
+========================================
+QUERY 1: What is cloud pricing?
+----------------------------------------
+✅ Final Answer:
+Based on the knowledge base:
+- Title: Cloud Pricing Basics
+Summary: Typical cloud VM pricing uses hourly rates + data transfer costs. 
+Spot instances offer discounts but risk eviction. 
+
+🔍 Trace:
+1. Retrieved 3 documents
+2. Found 1 relevant hit
+3. Answered directly from KB
+
+🛠 Tool Used: None (KB only)
+⚡ Latency: 0.08s
+========================================
+
+QUERY 2: How do rate limiting patterns work?
+----------------------------------------
+✅ Final Answer:
+- Token bucket and leaky bucket are common strategies. 
+- Rate limits influence retry-backoff; exponential backoff is recommended.  
+
+🔍 Trace:
+1. Retrieved 3 documents
+2. Found 3 relevant hits
+3. Answered from KB
+
+🛠 Tool Used: None (KB only)
+⚡ Latency: 0.11s
+========================================
+
+QUERY 3: What is machine learning?
+----------------------------------------
+✅ Final Answer:
+No directly relevant KB documents found. Returned a neutral response.
+
+🔍 Trace:
+1. Retrieved 3 documents
+2. None relevant
+3. Answer: "No relevant KB docs"
+
+🛠 Tool Used: None (fallback neutral response)
+⚡ Latency: 0.13s
+========================================
+
+QUERY 4: What is the price of coffee?
+----------------------------------------
+✅ Final Answer:
+Coffee: 3.5 USD  
+SKU: COF123  
+
+🔍 Trace:
+1. Selected CSV tool for pricing
+2. Retrieved product row from CSV
+3. Returned authoritative price
+
+🛠 Tool Used: CSV Lookup
+⚡ Latency: 0.18s
+========================================
+
+QUERY 5: Find SKU PEN456
+----------------------------------------
+✅ Final Answer:
+Pen: 1.2 USD  
+SKU: PEN456  
+
+🔍 Trace:
+1. Selected CSV tool for pricing
+2. Retrieved product row from CSV
+3. Returned authoritative price
+
+🛠 Tool Used: CSV Lookup
+⚡ Latency: 0.21s
+========================================
+
+QUERY 6: Show me available products
+----------------------------------------
+✅ Final Answer:
+- Coffee (SKU COF123) - 3.5 USD - stock 120  
+- Pen (SKU PEN456) - 1.2 USD - stock 500  
+- Laptop (SKU LAP789) - 799.0 USD - stock 15  
+- Notebook (SKU BOOK001) - 4.5 USD - stock 100  
+
+🔍 Trace:
+1. Selected CSV tool for catalog listing
+2. Retrieved 4 product rows
+3. Returned authoritative catalog
+
+🛠 Tool Used: CSV Lookup
+⚡ Latency: 0.24s
+========================================
+
+QUERY 7: What is the latest news about AI?
+----------------------------------------
+✅ Final Answer:
+Search result for query: "What is the latest news about AI?"  
+(This is a simulated web result; real version would fetch live headlines.)  
+
+🔍 Trace:
+1. Detected “news/current events”
+2. Selected Web Search tool
+3. Returned summarized headlines
+
+🛠 Tool Used: Web Search (simulated)
+⚡ Latency: 0.27s
+========================================
+
+QUERY 8: How to implement REST APIs in Python?
+----------------------------------------
+✅ Final Answer:
+Based on KB:
+- CSV can act as a simple local “API” for demos, with exact or fuzzy matching.
+
+🔍 Trace:
+1. Retrieved 3 documents
+2. Found 1 relevant hit
+3. Answered from KB
+
+🛠 Tool Used: None (KB only)
+⚡ Latency: 0.30s
+========================================
+
+QUERY 9: Get user information for user ID 1
+----------------------------------------
+✅ Final Answer:
+No relevant documents found. Returned neutral response.
+
+🔍 Trace:
+1. Retrieved 3 documents
+2. None relevant
+3. Returned neutral
+
+🛠 Tool Used: None
+⚡ Latency: 0.37s
+========================================
+
+QUERY 10: Show me posts from user 2
+----------------------------------------
+✅ Final Answer:
+No relevant KB documents found. Returned neutral response.
+
+🔍 Trace:
+1. Retrieved 3 documents
+2. None relevant
+3. Returned neutral
+
+🛠 Tool Used: None
+⚡ Latency: 0.40s
+========================================
+
+QUERY 11: Find the price of coffee and then search for coffee brewing tips
+----------------------------------------
+✅ Final Answer:
+CSV lookup returned no rows for combined query. Responded with not-found.
+
+🔍 Trace:
+1. Selected CSV tool
+2. No matching product found
+3. Enforced CSV as authoritative source
+
+🛠 Tool Used: CSV Lookup
+⚡ Latency: 0.49s
+========================================
